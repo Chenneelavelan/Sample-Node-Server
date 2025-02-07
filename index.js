@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const PORT = 3000;
 
 const cors = require('cors');
 app.use(cors());
@@ -18,6 +17,4 @@ app.get('/test', (req, res) => {
     })
 })
 
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-});
+module.exports = app; // Vercel auto-detects this
